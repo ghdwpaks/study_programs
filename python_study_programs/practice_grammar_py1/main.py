@@ -1,14 +1,15 @@
 import random
 import copy as c
+import os
 str_t = ""
 print("Hello world!")
 
 
 def setting_string() :
     global str_t
-    print("setting_string1 진입함")
+    #print("setting_string1 진입함")
     r1 = random.randint(10,20)
-    print("r1 :",r1)
+    #print("r1 :",r1)
     str1 = []
     for i in range(0,r1) :
         r2 = random.randint(1,100)
@@ -23,6 +24,7 @@ def setting_string() :
 def test_slicing() :
     global str_t
     for i in range (0,10) :
+        os.system("cls")
         print("원문은 str_t : {} 입니다.".format(str_t))
         r1 = random.randint(1,3)
         if r1 == 1:
@@ -36,7 +38,7 @@ def test_slicing() :
             r2 = random.randint(-len(str_t),len(str_t))
             r3 = 0
             if r2 < 0 :
-                r3 = random.randint(len(str_t)-r2+1,len(str_t))
+                r3 = random.randint(len(str_t)+r2+1,len(str_t))
             else :
                 r3 = random.randint(r2+1,len(str_t))
             print("str_t[{}:{}] 은 뭘까요?".format(r2,r3))
@@ -57,8 +59,8 @@ def chech_ans(user_ans , right_ans) :
         print("맞았습니다!")
     else :
         print("아닙니다.")
-        print("정답은 '{}'이고 , 당신은 '{}'을(를) 입력하셨습니다.".format(right_ans,user_ans))
-        
+        print("정답은 \n'{}'이고 , 당신은 \n'{}'을(를) 입력하셨습니다.".format(right_ans,user_ans))
+    os.system("pause")
 
 print("Hello world!")
 setting_string()
