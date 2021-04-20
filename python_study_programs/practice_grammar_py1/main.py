@@ -111,6 +111,16 @@ def test_repalce() :
     ans = input("")
     check_ans(ans,str_t.replace(str4,str3))
 
+def test_find() :
+    global str_t
+    print("원문은 str_t : {}입니다.".format(str_t))
+    len1 = random.randint(1,3)
+    num_t = random.randint(0,len(str_t) - len1)
+    str3 = str_t[num_t:num_t+len1]
+    print("str.find('{}')은 뭘까요?".format(str3))
+    ans = input("")
+    check_ans(int(ans),str_t.find(str3))
+
 
 
 def check_ans(user_ans , right_ans) :
@@ -165,6 +175,7 @@ while True :
             print(6)
         elif userans1 == 7 :
             #find 문자열에서 인자를 왼쪽부터 찾고 그 위치 알려주기
+            test_find()
             print(7)
         elif userans1 == 8 :
             #rfind 문자열에서 인자를 오른쪽부터 찾고 그 위치 알려주기
