@@ -66,6 +66,13 @@ def test_count() :
     ans = input("")
     check_ans(ans,chr1)
 
+def test_upper() :
+    global str_t
+    print("원문은 str_t : {} 입니다.".format(str_t))
+    print("str_t.upper() 은 뭘까요?")
+    ans = input("")
+    check_ans(ans,str_t.upper())
+
 
 def check_ans(user_ans , right_ans) :
     if user_ans == right_ans :
@@ -89,7 +96,8 @@ while True :
     print("6.replace 문자열 대체하기")
     print("7.find 문자열에서 인자를 왼쪽부터 찾고 그 위치 알려주기")
     print("8.rfind 문자열에서 인자를 오른쪽부터 찾고 그 위치 알려주기")
-    print("9.slicing 문자열 슬라이싱 테스트 진입")
+    print("10.slicing 문자열 슬라이싱 테스트 진입")
+    print("0.나가기")
     userans1 = int(input("입력 : "))
     for i in range(0,10) :
         setting_string()
@@ -98,9 +106,11 @@ while True :
             test_length()
         elif userans1 == 2 :
             #count 문자열에서 인자갯수 찾기
+            test_count()
             print(2)
         elif userans1 == 3 :
             #upper 모두 대문자로 변환하기
+            
             print(3)
         elif userans1 == 4 :
             #lower 모두 소문자로 변환하기
@@ -123,3 +133,5 @@ while True :
         elif userans1 == 10 :
             print("문자열 슬라이싱 테스트 진입")
             test_slicing()
+        elif userans1 == 0:
+            break
