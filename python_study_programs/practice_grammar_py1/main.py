@@ -80,6 +80,13 @@ def test_lower() :
     ans = input("")
     check_ans(ans,str_t.lower())
 
+def test_strip() :
+    global str_t
+    print("원문은 str_t : {}입니다.".format(str_t))
+    print("str_t.strip() 은 뭘까요?")
+    ans = input("")
+    check_ans(ans,str_t.strip())
+
 def check_ans(user_ans , right_ans) :
     if user_ans == right_ans :
         print("맞았습니다!")
