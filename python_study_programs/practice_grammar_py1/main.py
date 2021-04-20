@@ -73,6 +73,12 @@ def test_upper() :
     ans = input("")
     check_ans(ans,str_t.upper())
 
+def test_lower() :
+    global str_t
+    print("원문은 str_t : {}입니다.".format(str_t))
+    print("str_t.lower() 은 뭘까요?")
+    ans = input("")
+    check_ans(ans,str_t.lower())
 
 def check_ans(user_ans , right_ans) :
     if user_ans == right_ans :
