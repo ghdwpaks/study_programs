@@ -64,4 +64,36 @@ def chech_ans(user_ans , right_ans) :
 
 print("Hello world!")
 setting_string()
-test_slicing()
+
+
+if userans1 == 1 :
+    #len, 글자 수 세기
+    print(1)
+    
+elif userans1 == 2 :
+    #count 문자열에서 인자갯수 찾기
+    print(2)
+elif userans1 == 3 :
+    #upper 모두 대문자로 변환하기
+    print(3)
+elif userans1 == 4 :
+    #lower 모두 소문자로 변환하기
+    print(4)
+elif userans1 == 5 :
+    #strip 왼쪽, 오른쪽 모두 공백 없애기
+    print(5)
+elif userans1 == 6 :
+    #replace 문자열 대체하기
+    print(6)
+elif userans1 == 7 :
+    #find 문자열에서 인자를 왼쪽부터 찾고 그 위치 알려주기
+    print(7)
+elif userans1 == 8 :
+    #rfind 문자열에서 인자를 오른쪽부터 찾고 그 위치 알려주기
+    print(8)
+elif userans1 == 9 :
+    #find 찾지 못하면 -1 리턴
+    print(9)
+elif userans1 == 10 :
+    print("문자열 슬라이싱 테스트 진입")
+    test_slicing()
