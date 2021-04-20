@@ -62,6 +62,17 @@ def test_length() :
         ans = input("")
         check_ans(ans,str(len(str_t)))
 
+def test_count() :
+    global str_t
+    for i in range(0,10) :
+        setting_string()
+        print("원문은 str_t : {}입니다.".format(str_t))
+        chr1 = str_t[random.randint(0,len(str_t)-1)]
+        print("str_t.count('{}')은 뭘까요?".format(chr1))
+        ans = input("")
+        check_ans(ans,chr1)
+
+        
 
 def check_ans(user_ans , right_ans) :
     if user_ans == right_ans :
