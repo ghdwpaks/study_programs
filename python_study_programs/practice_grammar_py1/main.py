@@ -121,6 +121,15 @@ def test_find() :
     ans = input("")
     check_ans(int(ans),str_t.find(str3))
 
+def test_rfind() :
+    global str_t
+    print("원문은 str_t : {}입니다.".format(str_t))
+    len1 = random.randint(1,3)
+    num_t = random.randint(0,len(str_t) - len1)
+    str3 = str_t[num_t:num_t+len1]
+    print("str.rfind('{}')은 뭘까요?".format(str3))
+    ans = input("")
+    check_ans(int(ans),str_t.rfind(str3))
 
 
 def check_ans(user_ans , right_ans) :
@@ -179,10 +188,8 @@ while True :
             print(7)
         elif userans1 == 8 :
             #rfind 문자열에서 인자를 오른쪽부터 찾고 그 위치 알려주기
+            test_rfind()
             print(8)
-        elif userans1 == 9 :
-            #find 찾지 못하면 -1 리턴
-            print(9)
         elif userans1 == 10 :
             print("문자열 슬라이싱 테스트 진입")
             test_slicing()
