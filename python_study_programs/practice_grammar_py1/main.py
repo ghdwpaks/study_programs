@@ -21,6 +21,19 @@ def setting_string() :
     str2 = "".join(str1)
     str_t = c.deepcopy(str2)
 
+def setting_string2(len) :
+    str1 = []
+    for i in range(0,len) :
+        r2 = random.randint(1,100)
+        if r2 % 2 == 0 :
+            r2 = random.randint(65,90)
+        else :
+            r2 = random.randint(97,122)
+        str1.append(chr(r2))
+    str2 = "".join(str1)
+    str3 = c.deepcopy(str2)
+    return str3
+
 def test_slicing() :
     global str_t
     os.system("cls")
@@ -87,6 +100,19 @@ def test_strip() :
     ans = input("")
     check_ans(ans,str_t.strip())
 
+def test_repalce() :
+    global str_t
+    print("원문은 str_t : {}입니다.".format(str_t))
+    len1 = random.randint(3,len(str_t)-3)
+    str3 = setting_string2(len1)
+    num_t = random.randint(0,len(str_t) - len1)
+    str4 = str_t[num_t:num_t+len(str3)]
+    print("str_t.replace('{}','{}') 은 뭘까요?".format(str4,str3))
+    ans = input("")
+    check_ans(ans,str_t.replace(str4,str3))
+
+
+
 def check_ans(user_ans , right_ans) :
     if user_ans == right_ans :
         print("맞았습니다!")
@@ -123,16 +149,19 @@ while True :
             print(2)
         elif userans1 == 3 :
             #upper 모두 대문자로 변환하기
-            
+            test_upper()
             print(3)
         elif userans1 == 4 :
             #lower 모두 소문자로 변환하기
+            test_lower()
             print(4)
         elif userans1 == 5 :
             #strip 왼쪽, 오른쪽 모두 공백 없애기
+            test_strip()
             print(5)
         elif userans1 == 6 :
             #replace 문자열 대체하기
+            test_repalce()
             print(6)
         elif userans1 == 7 :
             #find 문자열에서 인자를 왼쪽부터 찾고 그 위치 알려주기
