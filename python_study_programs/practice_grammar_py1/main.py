@@ -77,7 +77,7 @@ def test_count() :
     chr1 = str_t[random.randint(0,len(str_t)-1)]
     print("str_t.count('{}')은 뭘까요?".format(chr1))
     ans = input("")
-    check_ans(ans,chr1)
+    check_ans(int(ans),str_t.count(chr1))
 
 def test_upper() :
     global str_t
