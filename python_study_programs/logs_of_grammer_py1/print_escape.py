@@ -16,3 +16,15 @@ print('abc\'abc')
 
 print("\n\n5")
 print('abc\"abc')
+
+
+print("\n\n6")
+print('abc\fabc')
+
+
+print("\n\n7")
+print('abc\babc')
+
+
+print("\n\n8")
+print('abc\rabc')
