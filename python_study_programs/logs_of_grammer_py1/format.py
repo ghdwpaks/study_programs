@@ -25,14 +25,8 @@ print("{:+010}".format(a))
 
 print("\n"+"9")
 print("{:=+10}".format(a))
-
-
 print("\n\n\n")
-
-
 b = 51.54321
-
-
 print("\n"+"10")
 print("{:f}".format(b))
 
